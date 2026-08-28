@@ -13,7 +13,7 @@ This site has no build step, so these values are hand-duplicated across pages.
 | Email | kirstineely@yahoo.com |
 | Scheduling | By appointment only |
 | Street address | **None published.** Practice is mobile. |
-| Service area | Marina District, Cow Hollow, Pacific Heights, Sausalito, Mill Valley, Tiburon |
+| Service area | San Francisco and Marin |
 
 ## Where each appears
 
@@ -45,5 +45,4 @@ This site has no build step, so these values are hand-duplicated across pages.
 - [ ] Cash price, if she decides to publish it — `how-it-works.html`
 - [ ] Whether she does home or workplace visits — `how-it-works.html`
 - [ ] California DC license number — `bio.html`
-- [ ] Confirm the service area list is accurate
-- [ ] Confirm the intake PDF does not still show the old Chestnut St address
+- [x] ~~Confirm the intake PDF does not still show the old Chestnut St address~~ — it has no address or contact info at all
