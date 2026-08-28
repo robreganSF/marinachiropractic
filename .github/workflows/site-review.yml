@@ -1,0 +1,53 @@
+name: Semiannual site review
+
+# Opens a reminder issue twice a year so the site does not quietly go stale.
+# The whole point of this repo is that nobody thinks about it for months at a time,
+# which is exactly how the last version ended up a decade out of date.
+
+on:
+  schedule:
+    - cron: "0 16 1 3 *"  # March 1
+    - cron: "0 16 1 9 *"  # September 1
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+jobs:
+  open-review-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Open review issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = `Review marinachiropractic.com — ${new Date().toISOString().slice(0, 7)}`;
+            const body = [
+              'Twice-yearly check that the site still reflects reality. Takes about ten minutes.',
+              '',
+              '### Content',
+              '- [ ] Phone number still correct: 415.563.1046',
+              '- [ ] Email still correct: kirstineely@yahoo.com',
+              '- [ ] Service area still accurate',
+              '- [ ] Services listed still match what she actually offers',
+              '- [ ] New patient PDF is current and shows no old clinic address',
+              '- [ ] No street address has crept onto the site (the practice is mobile)',
+              '',
+              '### Infrastructure',
+              '- [ ] Site loads over HTTPS with a valid certificate',
+              '- [ ] Domain auto-renew is on and the card on file is valid',
+              '- [ ] Registrar WHOIS contact email is a real inbox someone reads',
+              '- [ ] Google Business Profile is current and set as a service-area business',
+              '',
+              '### Outstanding',
+              '- [ ] Any remaining placeholders in `content.md` worth filling in',
+              '',
+              'Close this issue once done. See `README.md` for the runbook.',
+            ].join('\n');
+
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              body,
+            });

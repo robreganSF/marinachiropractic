@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marina Chiropractic - Website Mockup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .hero-bg {
+            background-image: url('https://placehold.co/1920x1080/334155/e2e8f0?text=Marina+View+Placeholder'); /* Updated placeholder text */
+            background-size: cover;
+            background-position: center;
+        }
+        .cta-bg {
+            background-image: url('https://placehold.co/1920x600/1e3a8a/e0e7ff?text=Golden+Gate+Bridge+Placeholder'); /* Updated placeholder text */
+            background-size: cover;
+            background-position: center;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="bg-slate-700 text-white py-2 px-4 md:px-8">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-sm">
+            <div class="flex items-center space-x-4 mb-2 md:mb-0">
+                <a href="tel:415-563-1046" class="hover:text-orange-400"><i class="fas fa-phone-alt mr-1"></i> (415) 563-1046</a>
+                <a href="mailto:info@marinachiropractic.com" class="hover:text-orange-400 hidden md:inline-block"><i class="fas fa-envelope mr-1"></i> info@marinachiropractic.com</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 px-4 rounded-md text-xs md:text-sm transition duration-300">Request Appointment</a>
+                <div class="flex space-x-2">
+                    <a href="#" class="hover:text-orange-400"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-orange-400"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="hover:text-orange-400"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl md:text-3xl font-bold text-blue-700">
+                Marina <span class="text-orange-500">Chiropractic</span>
+            </a>
+
+            <nav class="hidden md:flex space-x-4 lg:space-x-6 items-center">
+                <a href="#" class="text-gray-700 hover:text-blue-600 transition duration-300">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600 transition duration-300">About Us</a>
+                <a href="#services" class="text-gray-700 hover:text-blue-600 transition duration-300">Services</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 transition duration-300">New Patients</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 transition duration-300">Contact Us</a>
+                <a href="#" class="text-gray-700 hover:text-blue-600 transition duration-300">Blog</a>
+            </nav>
+
+            <button id="mobileMenuButton" class="md:hidden text-gray-700 hover:text-blue-600 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg">
+            <a href="#" class="block py-3 px-6 text-gray-700 hover:bg-blue-50 transition duration-300">Home</a>
+            <a href="#about" class="block py-3 px-6 text-gray-700 hover:bg-blue-50 transition duration-300">About Us</a>
+            <a href="#services" class="block py-3 px-6 text-gray-700 hover:bg-blue-50 transition duration-300">Services</a>
+            <a href="#" class="block py-3 px-6 text-gray-700 hover:bg-blue-50 transition duration-300">New Patients</a>
+            <a href="#" class="block py-3 px-6 text-gray-700 hover:bg-blue-50 transition duration-300">Contact Us</a>
+            <a href="#" class="block py-3 px-6 text-gray-700 hover:bg-blue-50 transition duration-300">Blog</a>
+        </div>
+    </header>
+
+    <section class="hero-bg text-white py-20 md:py-32 lg:py-40">
+        <div class="container mx-auto px-4 md:px-8 text-center">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">
+                Your Path to a <span class="text-orange-400">Healthier Life</span> Starts Here
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl mb-8 md:mb-10 max-w-2xl mx-auto">
+                Experienced chiropractic care in Sausalito & Marin County, dedicated to your well-being.
+            </p>
+            <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 md:py-4 md:px-10 rounded-lg text-lg transition duration-300 transform hover:scale-105">
+                Schedule Your Visit
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-6">Welcome to Our Practice</h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        At Marina Chiropractic, we are committed to providing exceptional chiropractic care in a warm and welcoming environment. Our experienced team is dedicated to helping you achieve optimal health and wellness through personalized treatment plans in the San Francisco and Marin areas.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        We believe in a holistic approach to health, addressing the root cause of your discomfort rather than just treating symptoms. Learn more about our philosophy and how we can help you on your journey to a pain-free life.
+                    </p>
+                    <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+                        Learn More About Us
+                    </a>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/d1d5db/374151?text=Our+Sausalito+Clinic" alt="Marina Chiropractic Clinic Interior" class="rounded-lg shadow-xl w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-16 md:py-24 bg-slate-50">
+        <div class="container mx-auto px-4 md:px-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-700 text-center mb-12 md:mb-16">Our Services</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg service-card transition duration-300">
+                    <div class="text-orange-500 text-4xl mb-4"><i class="fas fa-bone"></i></div>
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Chiropractic Adjustments</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Gentle and effective adjustments to restore proper spinal alignment and nervous system function.
+                    </p>
+                </div>
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg service-card transition duration-300">
+                    <div class="text-orange-500 text-4xl mb-4"><i class="fas fa-running"></i></div>
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Sports Injuries</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Specialized care for athletes of all levels to recover from injuries and enhance performance.
+                    </p>
+                </div>
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg service-card transition duration-300">
+                    <div class="text-orange-500 text-4xl mb-4"><i class="fas fa-child"></i></div>
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Pediatric Care</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Safe and gentle chiropractic care for infants, children, and teenagers.
+                    </p>
+                </div>
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg service-card transition duration-300">
+                    <div class="text-orange-500 text-4xl mb-4"><i class="fas fa-female"></i></div>
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Prenatal Care</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Supporting mothers through pregnancy with specialized chiropractic techniques.
+                    </p>
+                </div>
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg service-card transition duration-300">
+                    <div class="text-orange-500 text-4xl mb-4"><i class="fas fa-notes-medical"></i></div>
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Corrective Exercises</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Customized exercise plans to strengthen your body and prevent future injuries.
+                    </p>
+                </div>
+                <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg service-card transition duration-300">
+                    <div class="text-orange-500 text-4xl mb-4"><i class="fas fa-spa"></i></div>
+                    <h3 class="text-xl font-semibold text-blue-700 mb-3">Massage Therapy</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Therapeutic massage to relieve tension, reduce stress, and complement chiropractic care.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-2/5 mb-8 md:mb-0">
+                    <img src="https://placehold.co/400x500/d1d5db/374151?text=Dr.+Kirsti+Neely" alt="Dr. Kirsti Neely" class="rounded-lg shadow-xl w-full max-w-sm mx-auto h-auto">
+                </div>
+                <div class="md:w-3/5 md:pl-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-700 mb-6">Meet Dr. Kirsti Neely</h2>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Dr. Kirsti Neely is a passionate and dedicated chiropractor with extensive experience in helping patients in Sausalito, Marin, and San Francisco achieve their health goals. She is a graduate of a leading chiropractic college and has pursued advanced training in various chiropractic techniques.
+                    </p>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        Her patient-centered approach focuses on identifying the underlying cause of pain and dysfunction, creating personalized treatment plans that empower patients to take an active role in their recovery. Dr. Neely is committed to ongoing education to provide the most up-to-date and effective care.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        "My mission is to help you live a healthier, more active life, free from pain. I look forward to partnering with you on your wellness journey."
+                    </p>
+                    <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-lg transition duration-300">
+                        Read Full Bio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-slate-700 text-white">
+        <div class="container mx-auto px-4 md:px-8 text-center">
+            <i class="fas fa-quote-left text-orange-400 text-5xl mb-6"></i>
+            <h2 class="text-3xl md:text-4xl font-bold mb-8">What Our Patients Say</h2>
+            <div class="max-w-2xl mx-auto">
+                <p class="text-xl italic mb-6 leading-relaxed">
+                    "I've been going to Marina Chiropractic for months, and the difference in my back pain is incredible. The staff is friendly, and Dr. Neely is truly amazing. Highly recommend!"
+                </p>
+                <p class="font-semibold text-orange-400">- A Happy Patient</p> </div>
+        </div>
+    </section>
+
+    <section class="cta-bg py-16 md:py-24 text-white">
+        <div class="container mx-auto px-4 md:px-8 text-center bg-black bg-opacity-50 p-8 md:p-12 rounded-lg">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Take Control of Your Health?</h2>
+            <p class="text-lg md:text-xl mb-8 max-w-xl mx-auto">
+                Don't let pain hold you back any longer. Schedule your consultation today and discover the benefits of chiropractic care at Marina Chiropractic.
+            </p>
+            <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 md:py-4 md:px-10 rounded-lg text-lg transition duration-300 transform hover:scale-105">
+                Book Your Appointment Now
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-slate-800 text-slate-300 py-12 md:py-16">
+        <div class="container mx-auto px-4 md:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h5 class="text-lg font-semibold text-white mb-4">Marina Chiropractic</h5>
+                    <p class="text-sm mb-3">Providing quality chiropractic care to the Sausalito, Marin, and San Francisco communities. We are dedicated to your health and well-being.</p>
+                     <p class="text-sm mb-3"><a href="http://www.marinachiropractic.com" class="hover:text-orange-400" target="_blank">www.marinachiropractic.com</a></p>
+                    <div class="flex space-x-3 mt-4">
+                        <a href="#" class="text-slate-400 hover:text-orange-400 transition duration-300"><i class="fab fa-facebook-f text-xl"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-orange-400 transition duration-300"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-orange-400 transition duration-300"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="#" class="text-slate-400 hover:text-orange-400 transition duration-300"><i class="fab fa-linkedin-in text-xl"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h5 class="text-lg font-semibold text-white mb-4">Quick Links</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#about" class="hover:text-orange-400 transition duration-300">About Us</a></li>
+                        <li><a href="#services" class="hover:text-orange-400 transition duration-300">Our Services</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition duration-300">New Patient Center</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition duration-300">Testimonials</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition duration-300">Blog</a></li>
+                        <li><a href="#" class="hover:text-orange-400 transition duration-300">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="text-lg font-semibold text-white mb-4">Contact Us</h5>
+                    <address class="text-sm not-italic">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt mr-2 text-orange-400"></i>1001 Bridgeway, Sausalito, CA</p>
+                        <p class="mb-2"><i class="fas fa-phone-alt mr-2 text-orange-400"></i><a href="tel:415-563-1046" class="hover:text-orange-400">(415) 563-1046</a></p>
+                        <p class="mb-2"><i class="fas fa-envelope mr-2 text-orange-400"></i><a href="mailto:info@marinachiropractic.com" class="hover:text-orange-400">info@marinachiropractic.com</a></p>
+                        <p><i class="fas fa-clock mr-2 text-orange-400"></i>Mon - Fri: 9am - 6pm (Example hours)</p>
+                    </address>
+                </div>
+
+                <div>
+                    <h5 class="text-lg font-semibold text-white mb-4">Our Location</h5>
+                    <div class="bg-slate-700 h-40 rounded-md flex items-center justify-center text-slate-400 text-sm">
+                        Sausalito Map Placeholder
+                    </div>
+                     <p class="text-sm mt-4">Sign up for our newsletter for health tips!</p>
+                    <form class="mt-2 flex">
+                        <input type="email" placeholder="Your Email" class="bg-slate-600 text-white px-3 py-2 rounded-l-md text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 w-full">
+                        <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white px-4 py-2 rounded-r-md text-sm font-semibold transition duration-300">Go</button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-slate-700 pt-8 text-center text-sm">
+                <p>&copy; <span id="currentYear"></span> Marina Chiropractic. All Rights Reserved. Designed by AI.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Set current year in footer
+        const currentYearSpan = document.getElementById('currentYear');
+        if (currentYearSpan) {
+            currentYearSpan.textContent = new Date().getFullYear();
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Close mobile menu if open after clicking a link
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) { // Added null check for mobileMenu
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

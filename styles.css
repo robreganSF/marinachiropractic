@@ -1,0 +1,493 @@
+:root {
+  --ink: #1b2b33;
+  --ink-soft: #4a5c66;
+  --teal: #12626e;
+  --teal-dark: #0d4b55;
+  --sand: #f6f1e8;
+  --sand-line: #e5dbcb;
+  --paper: #ffffff;
+  --shell: #fbfaf7;
+  --max: 68rem;
+  --radius: 14px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--shell);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 0.5em;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p {
+  margin: 0 0 1.1em;
+}
+
+a {
+  color: var(--teal);
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+.narrow {
+  max-width: 46rem;
+}
+
+/* Skip link for keyboard and screen reader users */
+.skip {
+  position: absolute;
+  left: -9999px;
+  background: var(--teal);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  z-index: 100;
+}
+
+.skip:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  background: var(--paper);
+  border-bottom: 1px solid var(--sand-line);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.5rem;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.brand span {
+  display: block;
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  letter-spacing: 0;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.15rem;
+  margin-left: auto;
+}
+
+.site-nav a {
+  color: var(--ink-soft);
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 0.2rem 0;
+  border-bottom: 2px solid transparent;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  color: var(--teal);
+  border-bottom-color: var(--teal);
+}
+
+.header-cta {
+  background: var(--teal);
+  color: #fff !important;
+  padding: 0.5rem 1rem !important;
+  border-radius: 999px;
+  font-weight: 600;
+  border-bottom: none !important;
+}
+
+.header-cta:hover {
+  background: var(--teal-dark);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  background: linear-gradient(180deg, var(--sand) 0%, var(--shell) 100%);
+  padding: clamp(3rem, 8vw, 5.5rem) 0 clamp(2.5rem, 6vw, 4rem);
+}
+
+.hero .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--teal);
+  margin-bottom: 0.9rem;
+}
+
+.hero p.lead {
+  font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+  color: var(--ink-soft);
+  max-width: 34rem;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid var(--teal);
+}
+
+.btn-primary {
+  background: var(--teal);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--teal-dark);
+  border-color: var(--teal-dark);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--teal);
+}
+
+.btn-secondary:hover {
+  background: var(--sand);
+}
+
+/* ---------- Sections ---------- */
+
+section {
+  padding: clamp(2.5rem, 6vw, 4rem) 0;
+}
+
+section.alt {
+  background: var(--paper);
+  border-top: 1px solid var(--sand-line);
+  border-bottom: 1px solid var(--sand-line);
+}
+
+.section-intro {
+  max-width: 42rem;
+  color: var(--ink-soft);
+}
+
+/* ---------- Cards ---------- */
+
+.grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  margin-top: 2rem;
+}
+
+.card {
+  background: var(--paper);
+  border: 1px solid var(--sand-line);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+}
+
+section.alt .card {
+  background: var(--shell);
+}
+
+.card h3 {
+  margin-bottom: 0.35rem;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Numbered steps ---------- */
+
+.steps {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.steps li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 3.25rem;
+}
+
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background: var(--teal);
+  color: #fff;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+}
+
+.steps h3 {
+  margin-bottom: 0.2rem;
+}
+
+.steps p {
+  margin-bottom: 0;
+  color: var(--ink-soft);
+}
+
+/* ---------- Conditions list ---------- */
+
+.pill-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pill-list li {
+  background: var(--paper);
+  border: 1px solid var(--sand-line);
+  border-radius: 999px;
+  padding: 0.4rem 0.95rem;
+  font-size: 0.92rem;
+}
+
+section.alt .pill-list li {
+  background: var(--shell);
+}
+
+/* ---------- Service area ---------- */
+
+.area-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+}
+
+.area-list li {
+  padding-left: 1.5rem;
+  position: relative;
+  color: var(--ink-soft);
+}
+
+.area-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--teal);
+}
+
+/* ---------- Contact block ---------- */
+
+.contact-block {
+  background: var(--paper);
+  border: 1px solid var(--sand-line);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  margin-top: 1.5rem;
+}
+
+.contact-block dl {
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-block dt {
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-soft);
+}
+
+.contact-block dd {
+  margin: 0.15rem 0 0;
+  font-size: 1.1rem;
+}
+
+/* ---------- Images ---------- */
+
+figure {
+  margin: 2rem 0 0;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  display: block;
+  border: 1px solid var(--sand-line);
+}
+
+figcaption {
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin-top: 0.6rem;
+}
+
+.placeholder {
+  background: var(--sand);
+  border: 2px dashed var(--sand-line);
+  border-radius: var(--radius);
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+}
+
+/* ---------- Callout ---------- */
+
+.callout {
+  background: var(--sand);
+  border-left: 4px solid var(--teal);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 1.25rem 1.5rem;
+  margin: 2rem 0 0;
+}
+
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---------- Prose ---------- */
+
+.prose h2 {
+  margin-top: 2.5rem;
+}
+
+.prose h3 {
+  margin-top: 1.75rem;
+}
+
+.prose ul {
+  padding-left: 1.25rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  background: var(--ink);
+  color: #c3d0d6;
+  padding: 3rem 0 2rem;
+  margin-top: 3rem;
+}
+
+.site-footer a {
+  color: #fff;
+}
+
+.footer-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+}
+
+.site-footer h3 {
+  color: #fff;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.site-footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.site-footer li {
+  margin-bottom: 0.4rem;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  font-size: 0.85rem;
+  color: #8fa3ab;
+}
+
+.disclaimer {
+  font-size: 0.82rem;
+  color: #8fa3ab;
+  max-width: 46rem;
+}
