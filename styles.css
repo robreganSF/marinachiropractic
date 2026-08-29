@@ -410,6 +410,29 @@ figcaption {
   font-size: 0.95rem;
 }
 
+/* Source headshot is only 349px wide, so cap the display size
+   to keep it sharp on high-density screens. */
+.portrait {
+  max-width: 15rem;
+  margin: 0 0 1.75rem;
+  float: right;
+  margin-left: 1.75rem;
+}
+
+.portrait img {
+  border-radius: 50%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+@media (max-width: 44rem) {
+  .portrait {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 /* ---------- Callout ---------- */
 
 .callout {

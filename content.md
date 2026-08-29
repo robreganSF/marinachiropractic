@@ -38,9 +38,12 @@ This site has no build step, so these values are hand-duplicated across pages.
 
 ## Still needs filling in
 
-- [ ] Photo of Dr. Neely — `images/dr-neely.jpg`, referenced in `bio.html`
-- [ ] Photo of van interior — `images/van-interior.jpg`, referenced in `how-it-works.html`
-- [ ] Photo of van exterior — `images/van-exterior.jpg`, referenced in `how-it-works.html`
+- [x] ~~Photos~~ — added. `dr-neely.jpg` on `bio.html`; `van-interior.jpg` and
+      `van-exterior.jpg` on `how-it-works.html`; `van-exterior.jpg` also on `index.html`.
+      Derived from the originals in `images/` (`chiro-van.jfif`, `van-bridge2.jpg`).
+      Unused alternates kept: `van-bridge1.jpg`, `van-bridge-close-up.jpg`.
+- [ ] A larger headshot would help — the current one is only 349x341, so it is
+      displayed small to stay sharp
 - [ ] Visit durations, first visit and follow-up — `how-it-works.html`
 - [ ] Cash price, if she decides to publish it — `how-it-works.html`
 - [ ] Whether she does home or workplace visits — `how-it-works.html`
