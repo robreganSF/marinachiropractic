@@ -53,55 +53,75 @@
 <main id="main">
 
 <div class="hero">
-  <div class="wrap">
-    <p class="eyebrow">Mobile chiropractic care</p>
-    <h1>The office comes to you.</h1>
-    <p class="lead">Dr. Kirsti Neely practices out of a fully equipped mobile treatment van, meeting patients close to home across San Francisco and Marin. No waiting room. No hunting for parking. No rearranging your day.</p>
-    <div class="btn-row">
-      <a class="btn btn-primary" href="tel:+14155631046">Call or text 415.563.1046</a>
-      <a class="btn btn-secondary" href="how-it-works.html">See how it works</a>
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Mobile chiropractic &mdash; San Francisco &amp; Marin</p>
+      <h1>The office comes to you.</h1>
+      <p class="lead">Dr. Kirsti Neely brings a fully equipped chiropractic office to your neighborhood, in a van built for it.</p>
+      <ul class="chips">
+        <li>No waiting room</li>
+        <li>No parking hassle</li>
+        <li>Same doctor every visit</li>
+      </ul>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="tel:+14155631046">Call or text 415.563.1046</a>
+        <a class="btn btn-secondary" href="how-it-works.html">See how it works</a>
+      </div>
+      <p style="margin-top:1rem;font-size:0.95rem;color:var(--ink-soft)">By appointment only.</p>
     </div>
-    <p style="margin-top:1.25rem;font-size:0.95rem;color:var(--ink-soft)">By appointment only.</p>
+    <figure class="hero-media">
+      <img src="images/van-exterior.jpg" alt="The silver Sprinter treatment van parked in a waterfront lot with the Golden Gate Bridge behind it" width="1032" height="574" fetchpriority="high">
+    </figure>
   </div>
 </div>
 
-<section>
+<section class="alt">
   <div class="wrap">
-    <h2>A practice built around your schedule</h2>
+    <h2>How it works</h2>
     <p class="section-intro">After years running a clinic on Chestnut Street in San Francisco's Marina District, Dr. Neely rebuilt the practice around a simple observation: the hardest part of chiropractic care was never the adjustment. It was getting to the appointment.</p>
     <div class="grid">
       <div class="card">
-        <h3>Meet nearby</h3>
-        <p>Appointments happen at convenient, easy-to-reach spots in your neighborhood &mdash; most patients walk or make a short drive.</p>
+        <h3>1. Call or text</h3>
+        <p>You reach Dr. Neely directly. No front desk, no booking software.</p>
       </div>
       <div class="card">
-        <h3>A real treatment space</h3>
-        <p>The van is a high-roof, extended-wheelbase Sprinter outfitted with a proper chiropractic table. Private, clean, and purpose-built.</p>
+        <h3>2. Pick a spot</h3>
+        <p>She confirms an easy meeting point near you, anywhere in San Francisco or Marin.</p>
       </div>
       <div class="card">
-        <h3>One doctor, every visit</h3>
-        <p>You see Dr. Neely herself each time. No rotating providers, no front desk, no being handed off.</p>
-      </div>
-      <div class="card">
-        <h3>Straightforward and unhurried</h3>
-        <p>Appointment-only scheduling means visits start on time and you are not squeezed between two other patients.</p>
+        <h3>3. Get adjusted</h3>
+        <p>Consultation, exam, and treatment in a private, purpose-built space.</p>
       </div>
     </div>
+    <figure>
+      <img src="images/van-interior.jpg" alt="Inside the treatment van: a chiropractic adjusting table, stool, and bench seating with full standing headroom" width="1100" height="1233" loading="lazy">
+      <figcaption>Inside the van &mdash; a full adjusting table, room to stand, and privacy.</figcaption>
+    </figure>
+    <!-- CONTENT: service area also listed in the JSON-LD above, in contact.html, and in the footer of every page. See content.md. -->
   </div>
 </section>
 
-<section class="alt">
+<section>
   <div class="wrap">
-    <h2>Where Dr. Neely practices</h2>
-    <p class="section-intro">Dr. Neely sees patients throughout <strong>San Francisco and Marin</strong>. Appointments are arranged at accessible meeting points near you &mdash; when you book, she will confirm the exact spot.</p>
-    <figure>
-      <img src="images/van-exterior.jpg" alt="The silver Sprinter treatment van parked in a waterfront lot with the Golden Gate Bridge behind it" width="1032" height="574" loading="lazy">
-      <figcaption>A typical meeting spot &mdash; easy parking and a short walk, with the office already there.</figcaption>
-    </figure>
-    <!-- CONTENT: service area also listed in the JSON-LD above, in contact.html, and in the footer of every page. See content.md. -->
-    <div class="callout">
-      <p>Not sure whether you are in range? Call or text <a href="tel:+14155631046">415.563.1046</a> and ask &mdash; the service area is flexible.</p>
+    <h2>What patients say</h2>
+    <div class="quotes">
+      <blockquote>
+        <p class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p>&ldquo;I hobbled my way to her with searing leg and back pain&hellip; by the end of the session I was able to walk away in comfort and almost pain free.&rdquo;</p>
+        <footer>Bettina F. &mdash; San Francisco</footer>
+      </blockquote>
+      <blockquote>
+        <p class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p>&ldquo;I called her Saturday afternoon and left a message. She immediately returned my call and treated me right away. She followed up the very next morning.&rdquo;</p>
+        <footer>Petek U. &mdash; San Mateo</footer>
+      </blockquote>
+      <blockquote>
+        <p class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+        <p>&ldquo;Extremely professional, knowledgeable, and surprisingly humble. Her sports and fitness background sets her apart from other chiropractors.&rdquo;</p>
+        <footer>Steven C. &mdash; San Francisco</footer>
+      </blockquote>
     </div>
+    <p style="margin-top:1.5rem;font-size:0.9rem;color:var(--ink-soft)">Reviews from Yelp. Individual results vary.</p>
   </div>
 </section>
 
@@ -129,12 +149,13 @@
 
 <section class="alt">
   <div class="wrap narrow">
-    <h2>New patients</h2>
-    <p>Download the new patient form, fill it in ahead of time, and bring it with you to your first appointment.</p>
+    <h2>Book a visit</h2>
+    <p>Dr. Neely sees patients throughout <strong>San Francisco and Marin</strong>, by appointment only. Call or text her directly &mdash; she answers her own phone.</p>
     <div class="btn-row">
-      <a class="btn btn-primary" href="forms/new-patient-intake.pdf">Download new patient form (PDF)</a>
+      <a class="btn btn-primary" href="tel:+14155631046">Call or text 415.563.1046</a>
+      <a class="btn btn-secondary" href="forms/new-patient-intake.pdf">New patient form (PDF)</a>
     </div>
-    <p style="margin-top:1.25rem;font-size:0.95rem;color:var(--ink-soft)">Please bring the completed form to your appointment rather than emailing it &mdash; that keeps your health information off email entirely.</p>
+    <p style="margin-top:1.25rem;font-size:0.95rem;color:var(--ink-soft)">New patients: fill in the form beforehand and bring it with you rather than emailing it &mdash; that keeps your health information off email entirely.</p>
   </div>
 </section>
 
@@ -178,6 +199,11 @@
     </div>
   </div>
 </footer>
+
+<div class="call-bar">
+  <a href="tel:+14155631046">Call</a>
+  <a class="secondary" href="sms:+14155631046">Text</a>
+</div>
 
 </body>
 </html>

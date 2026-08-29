@@ -126,6 +126,20 @@ a {
   flex-wrap: wrap;
   gap: 0.25rem 1.15rem;
   margin-left: auto;
+  align-items: center;
+}
+
+/* On phones the full nav wrapped to two lines and cost ~80px of the first
+   screen. Show only the call button there; the footer carries every link. */
+@media (max-width: 51.99rem) {
+  .site-nav a:not(.header-cta) {
+    display: none;
+  }
+
+  .header-inner {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+  }
 }
 
 .site-nav a {
@@ -159,7 +173,7 @@ a {
 
 .hero {
   background: linear-gradient(180deg, var(--sand) 0%, var(--shell) 100%);
-  padding: clamp(3rem, 8vw, 5.5rem) 0 clamp(2.5rem, 6vw, 4rem);
+  padding: clamp(1.75rem, 5vw, 3.5rem) 0 clamp(2rem, 5vw, 3.5rem);
 }
 
 .hero .eyebrow {
@@ -168,13 +182,67 @@ a {
   font-size: 0.78rem;
   font-weight: 700;
   color: var(--teal);
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.6rem;
 }
 
 .hero p.lead {
   font-size: clamp(1.05rem, 2.2vw, 1.25rem);
   color: var(--ink-soft);
   max-width: 34rem;
+}
+
+/* Photo-led hero. On phones the image comes first: the van in a parking
+   lot explains the practice faster than any sentence can. */
+.hero-grid {
+  display: grid;
+  gap: clamp(1.25rem, 4vw, 2.5rem);
+  align-items: center;
+}
+
+@media (min-width: 52rem) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.hero-media {
+  margin: 0;
+  order: -1;
+}
+
+@media (min-width: 52rem) {
+  .hero-media {
+    order: 0;
+  }
+}
+
+.hero-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+  box-shadow: 0 12px 32px rgba(27, 43, 51, 0.16);
+}
+
+/* ---------- Chips ---------- */
+
+.chips {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chips li {
+  background: var(--paper);
+  border: 1px solid var(--sand-line);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink-soft);
 }
 
 /* ---------- Buttons ---------- */
@@ -463,6 +531,90 @@ figcaption {
 
 .prose li {
   margin-bottom: 0.5rem;
+}
+
+/* ---------- Testimonials ---------- */
+
+.quotes {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  margin-top: 2rem;
+}
+
+.quotes blockquote {
+  background: var(--paper);
+  border: 1px solid var(--sand-line);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+section.alt .quotes blockquote {
+  background: var(--shell);
+}
+
+.quotes p {
+  font-size: 1.02rem;
+  margin-bottom: 1rem;
+}
+
+.quotes footer {
+  margin-top: auto;
+  font-size: 0.88rem;
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+.stars {
+  color: #d99a2b;
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+  margin-bottom: 0.6rem;
+}
+
+/* ---------- Sticky mobile call bar ---------- */
+
+/* The entire booking funnel is one phone number, so keep it permanently
+   reachable on phones. Hidden on larger screens where the header CTA is
+   always visible. */
+.call-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  display: none;
+  gap: 1px;
+  background: var(--sand-line);
+  box-shadow: 0 -4px 16px rgba(27, 43, 51, 0.12);
+}
+
+.call-bar a {
+  flex: 1;
+  text-align: center;
+  padding: 0.9rem 0.5rem;
+  background: var(--teal);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.call-bar a.secondary {
+  background: var(--ink);
+}
+
+@media (max-width: 51.99rem) {
+  .call-bar {
+    display: flex;
+  }
+
+  body {
+    padding-bottom: 3.5rem;
+  }
 }
 
 /* ---------- Footer ---------- */
